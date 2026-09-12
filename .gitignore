@@ -7,8 +7,14 @@
 *.userosscache
 *.sln.docstates
 
-## Generated Build Output (run BrowserCare.cmd to rebuild locally)
-BrowserCareBuild/
+## Generated Build Output (track portable executables only)
+BrowserCareBuild/*
+!BrowserCareBuild/x64/
+BrowserCareBuild/x64/*
+!BrowserCareBuild/x64/BrowserCare.exe
+!BrowserCareBuild/x86/
+BrowserCareBuild/x86/*
+!BrowserCareBuild/x86/BrowserCare.exe
 
 ## Runtime Logs & Local Data
 crash.log

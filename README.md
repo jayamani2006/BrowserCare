@@ -10,18 +10,72 @@
 
 <br/>
 
-<!-- AUTO SHORTCUT DOWNLOAD BUTTON AT TOP -->
-<p align="center">
-  <a href="https://github.com/jayamani2006/BrowserCare/raw/main/installer-output/BrowserCare-Setup-1.0.0.exe" download="BrowserCare-Setup-1.0.0.exe">
-    <img src="https://img.shields.io/badge/⚡_DOWNLOAD_BROWSERCARE_v1.0.0_(INSTALLER_EXE)-0078D6?style=for-the-badge&logo=windows&logoColor=white&labelColor=0A0A0B" alt="Download BrowserCare Installer" height="52"/>
-  </a>
-</p>
+<!-- 3 DOWNLOAD OPTIONS: 64-BIT (95%+ PCs), INSTALLER, AND 32-BIT -->
+<div align="center">
 
-<p align="center">
-  <b>Direct Link:</b> <a href="installer-output/BrowserCare-Setup-1.0.0.exe"><b>Download BrowserCare-Setup-1.0.0.exe (131 MB)</b></a>
-  <br/>
-  <i>Self-contained unified installer for Windows 10 & 11 (64-bit & 32-bit). No .NET installation required.</i>
-</p>
+### ⚡ Choose Your Download Format
+
+<table align="center" width="100%">
+  <thead>
+    <tr align="center">
+      <th width="34%">🌟 64-Bit Portable (Recommended)</th>
+      <th width="33%">📦 Unified Setup Installer</th>
+      <th width="33%">⚙️ 32-Bit (x86) Portable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr align="center">
+      <td>
+        <b>Compatible with 95%+ of Windows PCs</b><br/>
+        <i>All Windows 11 &amp; modern Windows 10</i><br/>
+        <code>BrowserCare.exe (x64)</code> — <b>74 MB</b>
+      </td>
+      <td>
+        <b>Complete Guided Setup Wizard</b><br/>
+        <i>Auto-detects 32-bit / 64-bit hardware</i><br/>
+        <code>BrowserCare-Setup-1.0.0.exe</code> — <b>131 MB</b>
+      </td>
+      <td>
+        <b>For Legacy 32-Bit Systems</b><br/>
+        <i>Older 32-bit Windows 10 machines</i><br/>
+        <code>BrowserCare.exe (x86)</code> — <b>68 MB</b>
+      </td>
+    </tr>
+    <tr align="center">
+      <td>
+        <a href="https://github.com/jayamani2006/BrowserCare/raw/main/BrowserCareBuild/x64/BrowserCare.exe" download="BrowserCare.exe">
+          <img src="https://img.shields.io/badge/⬇️_DOWNLOAD_64--BIT_EXE-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download 64-Bit Portable EXE" height="42"/>
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/jayamani2006/BrowserCare/raw/main/installer-output/BrowserCare-Setup-1.0.0.exe" download="BrowserCare-Setup-1.0.0.exe">
+          <img src="https://img.shields.io/badge/⚡_DOWNLOAD_INSTALLER-239120?style=for-the-badge&logo=windows&logoColor=white" alt="Download Complete Installer" height="42"/>
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/jayamani2006/BrowserCare/raw/main/BrowserCareBuild/x86/BrowserCare.exe" download="BrowserCare.exe">
+          <img src="https://img.shields.io/badge/⬇️_DOWNLOAD_32--BIT_EXE-6E7681?style=for-the-badge&logo=windows&logoColor=white" alt="Download 32-Bit Portable EXE" height="42"/>
+        </a>
+      </td>
+    </tr>
+    <tr align="center">
+      <td>
+        <a href="BrowserCareBuild/x64/BrowserCare.exe"><b>Direct File Link (x64 EXE)</b></a><br/>
+        <small><i>No installation needed • Portable standalone</i></small>
+      </td>
+      <td>
+        <a href="installer-output/BrowserCare-Setup-1.0.0.exe"><b>Direct File Link (Setup EXE)</b></a><br/>
+        <small><i>Desktop shortcut • Start Menu entry</i></small>
+      </td>
+      <td>
+        <a href="BrowserCareBuild/x86/BrowserCare.exe"><b>Direct File Link (x86 EXE)</b></a><br/>
+        <small><i>No installation needed • Portable standalone</i></small>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 <br/>
 
@@ -175,19 +229,27 @@ The application interface is styled with a bespoke, dark-mode design system (`Ap
 
 ## Installation & Deployment
 
-### Download the Unified Installer
-Click the download button at the top of this repository or download directly:
-* **[BrowserCare-Setup-1.0.0.exe](installer-output/BrowserCare-Setup-1.0.0.exe)** (131 MB)
+BrowserCare provides three distinct distribution formats to suit any Windows environment:
 
-### Installation Workflow
-1. Run `BrowserCare-Setup-1.0.0.exe`.
-2. Windows User Account Control (UAC) will request elevation once during setup to create the destination folder.
-3. **Recommended Directory:**
-   * Default: `C:\jssofttools\BrowserCare`
-   * Secondary drives: `D:\BrowserCare` or `E:\BrowserCare`
-   * *Note: Installing outside the write-protected `C:\Program Files` directory ensures smooth background updates and portable user configuration.*
-4. The installer automatically detects whether your operating system is 32-bit or 64-bit and extracts the optimized native binary.
-5. Launch BrowserCare from the desktop shortcut or Start Menu.
+### 1. 🌟 64-Bit Portable Standalone (`x64\BrowserCare.exe` — 74 MB)
+* **Recommended for 95%+ of Windows PCs** (all Windows 11 systems and modern Windows 10 x64 PCs).
+* **Zero Installation:** Download and double-click to run immediately.
+* **Portable:** Can be placed on a USB flash drive or anywhere on disk.
+* **Download:** [BrowserCareBuild/x64/BrowserCare.exe](BrowserCareBuild/x64/BrowserCare.exe)
+
+### 2. 📦 Complete Unified Installer (`BrowserCare-Setup-1.0.0.exe` — 131 MB)
+* **Guided Installation Wizard:** Automatically detects your system architecture (64-bit vs 32-bit) and extracts the native binary.
+* **Desktop & Start Menu Shortcuts:** Sets up standard Windows shortcuts and uninstaller registry entries.
+* **Recommended Install Directory:**
+  * Default: `C:\jssofttools\BrowserCare`
+  * Secondary drives: `D:\BrowserCare` or `E:\BrowserCare`
+  * *Note: Installing outside `Program Files` guarantees full read/write access without requiring administrative rights during routine operation.*
+* **Download:** [installer-output/BrowserCare-Setup-1.0.0.exe](installer-output/BrowserCare-Setup-1.0.0.exe)
+
+### 3. ⚙️ 32-Bit (x86) Portable Standalone (`x86\BrowserCare.exe` — 68 MB)
+* **For Legacy 32-Bit Systems:** Tailored for legacy 32-bit Windows 10 installations or lightweight x86 processors.
+* **Zero Installation:** Self-contained portable binary that runs out-of-the-box.
+* **Download:** [BrowserCareBuild/x86/BrowserCare.exe](BrowserCareBuild/x86/BrowserCare.exe)
 
 ---
 
