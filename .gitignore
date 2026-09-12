@@ -1,0 +1,24 @@
+## Visual Studio / .NET Core
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Generated Build Output (run BrowserCare.cmd to rebuild locally)
+BrowserCareBuild/
+
+## Runtime Logs & Local Data
+crash.log
+settings.json
+*.sqlite
+browsercare_*.sqlite
+
+## OS Metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

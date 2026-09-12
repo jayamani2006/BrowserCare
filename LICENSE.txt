@@ -1,0 +1,29 @@
+BrowserCare — Purpose & Legal Notice
+
+This app is created to clean and maintain Google Chrome only.
+
+It is built for non-commercial use, as a student project — not a
+commercial product.
+
+Reverse engineering, cracking, tampering with, or redistributing a
+modified version of this software is not permitted and may constitute
+a criminal offense under applicable law.
+
+BrowserCare is provided as-is, without warranty of any kind. The
+developer is not liable for any damage, data loss, or misuse resulting
+from use or modification of this software. By installing BrowserCare,
+you agree to use it only for its stated purpose.
+
+BrowserCare is an independent utility and is not affiliated with or
+endorsed by Google. Google Chrome is a trademark of Google LLC.
+
+Privacy: BrowserCare analyzes and cleans Chrome entirely on your own
+computer. It does not collect passwords, cookies, browsing history, or
+account credentials, and sends no telemetry of any kind.
+
+Developed by Jayasubramani S — Chip-X, a JS SoftTools product.
+General: jssofttoolproducts@gmail.com
+Support: support.jssofttoolproducts@gmail.com
+
+By clicking "I accept the agreement" below, you confirm you have read
+and agree to the above.

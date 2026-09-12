@@ -1,0 +1,52 @@
+name: 🐛 Bug Report
+description: Report an issue or unexpected behavior in BrowserCare.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report an issue with BrowserCare!
+        Please ensure you do NOT paste personal passwords, cookies, or sensitive browsing history.
+  - type: input
+    id: version
+    attributes:
+      label: BrowserCare Version
+      description: The version of BrowserCare you are using (e.g., 1.0.0).
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows 11 (64-bit)
+        - Windows 10 (64-bit)
+        - Windows 10 (32-bit)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the Problem
+      description: A clear and concise description of what happened.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Open BrowserCare
+        2. Click 'Quick Scan'
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen instead.
+    validations:
+      required: true

@@ -1,0 +1,23 @@
+name: 💡 Feature Request
+description: Suggest a new idea or improvement for BrowserCare.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the limitation is.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the Solution You'd Like
+      description: How would you like BrowserCare to handle this?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions Considered
+      description: Any alternative ideas or workarounds you have considered.

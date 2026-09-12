@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- On Windows 11, WPF defaults basic controls (ComboBox, CheckBox, etc.) to a
+         Fluent-influenced theme that rounds corners slightly. Turning this off keeps
+         every native control's edges genuinely square, matching every custom
+         ControlTemplate in App.xaml instead of fighting the OS theme on the ones
+         that weren't fully re-templated. -->
+    <UseWindowsThemeForBasicControls>false</UseWindowsThemeForBasicControls>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>BrowserCare</AssemblyName>
+    <RootNamespace>BrowserCare</RootNamespace>
+    <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Product>BrowserCare</Product>
+    <Company>JS SoftTools</Company>
+    <Authors>Jayasubramani S</Authors>
+    <Description>BrowserCare - Understand. Clean. Protect. A local-first Google Chrome storage analyzer and cleaner.</Description>
+    <Platforms>x64;x86</Platforms>
+    <RuntimeIdentifiers>win-x64;win-x86</RuntimeIdentifiers>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Assets folder is copied to output so logo.ico / logo.png are available at runtime. -->
+    <Resource Include="Assets\logo.png" Condition="Exists('Assets\logo.png')" />
+    <Content Include="Assets\logo.ico" Condition="Exists('Assets\logo.ico')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Microsoft.Data.Sqlite: reads Chrome's History/Downloads SQLite databases
+         (read-only, from a temp copy — never the live locked file). This is the
+         only external package in the project; everything else is base .NET/WPF. -->
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.10" />
+  </ItemGroup>
+
+</Project>
