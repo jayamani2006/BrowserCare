@@ -253,6 +253,14 @@ BrowserCare provides three distinct distribution formats to suit any Windows env
 
 ---
 
+### Distributing to Others (Zero-Dependency Guarantee)
+* **Distribute Only Self-Contained Builds:** Always ship the binaries produced in the self-contained output directory (`BrowserCareBuild\x64\BrowserCare.exe` or `BrowserCareBuild\x86\BrowserCare.exe`), or the setup installer. **NEVER** distribute the executable located in `bin\Release\net8.0-windows\`, because that binary is framework-dependent and requires the target PC to have the .NET 8 runtime already installed.
+* **Expected File Size:** A properly self-contained BrowserCare build bundles the entire .NET runtime and SQLite native dependencies into a single file, resulting in an expected size between **~65 MB and ~80 MB** (x64: ~74 MB, x86: ~68 MB). If the resulting `.exe` is under ~40 MB (e.g. ~150 KB to ~5 MB), it is framework-dependent and will fail on clean Windows installations.
+* **Windows SmartScreen Notice:** On clean machines, launching the unsigned standalone binary for the first time may trigger a standard Windows Defender SmartScreen prompt (*"Windows protected your PC"*). This is standard for independent software without a paid commercial Authenticode code-signing certificate. Users simply click **"More info" → "Run anyway"**.
+* **Clean VM Testing:** To verify distribution readiness, test the build on a completely fresh Windows 10/11 virtual machine without any .NET developer SDKs installed.
+
+---
+
 ## Building from Source
 
 ### Prerequisites

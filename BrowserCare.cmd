@@ -104,7 +104,13 @@ if not exist "BrowserCareBuild\x64\BrowserCare.exe" (
     echo   X BrowserCareBuild\x64\BrowserCare.exe was not produced.
     goto :fail
 )
-echo     OK x64 build ready
+for %%F in ("BrowserCareBuild\x64\BrowserCare.exe") do set "SIZE_X64=%%~zF"
+if !SIZE_X64! LSS 40000000 (
+    echo   X BrowserCareBuild\x64\BrowserCare.exe is only !SIZE_X64! bytes (under 40MB).
+    echo     The .NET runtime was NOT bundled properly (binary is framework-dependent).
+    goto :fail
+)
+echo     OK x64 build ready (!SIZE_X64! bytes - self-contained)
 
 echo   - 32-bit build (for 32-bit Windows 10)...
 dotnet publish BrowserCare.csproj -c Release -r win-x86 --self-contained true ^
@@ -119,7 +125,13 @@ if not exist "BrowserCareBuild\x86\BrowserCare.exe" (
     echo   X BrowserCareBuild\x86\BrowserCare.exe was not produced.
     goto :fail
 )
-echo     OK x86 build ready
+for %%F in ("BrowserCareBuild\x86\BrowserCare.exe") do set "SIZE_X86=%%~zF"
+if !SIZE_X86! LSS 40000000 (
+    echo   X BrowserCareBuild\x86\BrowserCare.exe is only !SIZE_X86! bytes (under 40MB).
+    echo     The .NET runtime was NOT bundled properly (binary is framework-dependent).
+    goto :fail
+)
+echo     OK x86 build ready (!SIZE_X86! bytes - self-contained)
 echo.
 
 echo [8/8] Preparing handoff folder...

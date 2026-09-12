@@ -51,5 +51,11 @@ Run through this before creating the Inno Setup installer.
 - [ ] No personal Windows username hard-coded
 - [ ] No debug-only code enabled
 
+## Distributing to others
+- [ ] Only ship the EXE from the self-contained publish output folder (`BrowserCareBuild\x64\BrowserCare.exe` or `BrowserCareBuild\x86\BrowserCare.exe`), NEVER the one from `bin\Release\net8.0-windows\`, since that one is always framework-dependent regardless of the csproj setting.
+- [ ] Expected file size range for a correctly self-contained build: ~65 MB to ~80 MB (x64 is ~74 MB, x86 is ~68 MB). If the resulting EXE is under ~40 MB (e.g. ~150 KB to ~5 MB), the .NET runtime was NOT bundled.
+- [ ] First-run may trigger Windows SmartScreen ("Windows protected your PC") because the binary is unsigned — this is expected and not a bug; the user clicks "More info" -> "Run anyway."
+- [ ] Recommended: Test the build on a completely clean Windows VM (with no .NET SDK or Visual Studio installed) to verify zero external dependencies.
+
 Only after every applicable box above is checked should the Inno Setup
 installer (`installer\BrowserCare.iss`) be compiled.

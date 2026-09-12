@@ -24,7 +24,9 @@
     <Description>BrowserCare - Understand. Clean. Protect. A local-first Google Chrome storage analyzer and cleaner.</Description>
     <Platforms>x64;x86</Platforms>
     <RuntimeIdentifiers>win-x64;win-x86</RuntimeIdentifiers>
-    <SelfContained>false</SelfContained>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>false</PublishTrimmed>
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)'==''">win-x64</RuntimeIdentifier>
   </PropertyGroup>
 
   <ItemGroup>
