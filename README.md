@@ -1,9 +1,7 @@
 <div align="center">
 
 <!-- MAIN JS BRAND LOGO AT TOP -->
-<img src="Assets/JSSTP.png" alt="JS SoftTools Products" width="220"/>
-
-<br/><br/>
+<img src="Assets/JSSTP.png" alt="JS SoftTools Products" width="176"/>
 
 # BrowserCare™
 ### *Understand. Clean. Protect.*
